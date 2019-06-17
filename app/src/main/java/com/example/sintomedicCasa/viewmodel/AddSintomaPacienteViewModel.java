@@ -49,7 +49,7 @@ public class AddSintomaPacienteViewModel extends ViewModel {
         sintoma.setPulso(pulso.getValue());
 
         NewSintomaPaciente newSintomaPaciente = new NewSintomaPaciente(pacienteId, sintoma);
-        // TODO: validaciones
+
         _newSintoma.setValue(newSintomaPaciente);
     }
 
