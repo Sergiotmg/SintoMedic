@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.example.sintomedic.viewmodel.RegisterDoctorViewModel" />
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
+        layout_height="match_parent"
+        layout_width="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/doctor_surname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@={vm.apellidos}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doctor_name" />
+
+            <EditText
+                android:id="@+id/centro_medico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@={vm.centro}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doctor_surname" />
+
+            <EditText
+                android:id="@+id/dni_nie_doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@={vm.dniNie}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/centro_medico" />
+
+            <EditText
+                android:id="@+id/phone_doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@={vm.telefono}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mail_doctor" />
+
+            <EditText
+                android:id="@+id/license_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@={vm.numColegiado}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phone_doctor" />
+
+            <EditText
+                android:id="@+id/mail_doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@={vm.correo}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/place_doctor" />
+
+            <EditText
+                android:id="@+id/place_doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@={vm.localidad}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dni_nie_doctor" />
+
+            <EditText
+                android:id="@+id/doctor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@={vm.nombre}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_doctorname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/name"
+                android:textColor="@android:color/black"
+                         android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/doctor_name"
+                app:layout_constraintEnd_toStartOf="@+id/doctor_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/doctor_name" />
+
+            <TextView
+                android:id="@+id/txt_doctorsurname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/Surnames"
+                android:textSize="20sp" android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/doctor_surname"
+                app:layout_constraintEnd_toStartOf="@+id/doctor_surname"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/doctor_surname" />
+
+            <TextView
+                android:id="@+id/txt_clinica"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="18dp"
+                android:gravity="center"
+                android:text="@string/centro_trabajo"
+                         android:textSize="20sp" android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/centro_medico"
+                app:layout_constraintEnd_toStartOf="@+id/centro_medico"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/centro_medico" />
+
+            <TextView
+                android:id="@+id/txt_dninieDoctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/identity_card"
+                         android:textSize="20sp" android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/dni_nie_doctor"
+                app:layout_constraintEnd_toStartOf="@+id/dni_nie_doctor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/dni_nie_doctor" />
+
+            <TextView
+                android:id="@+id/txt_placeDoctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Localidad"
+                         android:textSize="20sp" android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/place_doctor"
+                app:layout_constraintEnd_toStartOf="@+id/place_doctor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/place_doctor" />
+
+            <TextView
+                android:id="@+id/txt_mailDoctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Correo"
+                         android:textSize="20sp" android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/mail_doctor"
+                app:layout_constraintEnd_toStartOf="@+id/mail_doctor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mail_doctor" />
+
+            <TextView
+                android:id="@+id/txt_phoneDoctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Teléfono"
+                         android:textSize="20sp" android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/phone_doctor"
+                app:layout_constraintEnd_toStartOf="@+id/phone_doctor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/phone_doctor" />
+
+            <TextView
+                android:id="@+id/txt_numcolegiado"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:text="Número de colegiado"
+                         android:textSize="20sp" android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/license_number"
+                app:layout_constraintEnd_toStartOf="@+id/phone_doctor"
+                app:layout_constraintHorizontal_bias="0.581"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/license_number" />
+
+            <Button
+                android:id="@+id/button_registro_doctor"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="Registrar"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:onClick="createDoctor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pass_doctor" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.47" />
+
+            <EditText
+                android:id="@+id/pass_doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:text="@={vm.contrasenia}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/license_number" />
+
+            <TextView
+                android:id="@+id/txt_pass_doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Contraseña"
+                         android:textSize="20sp" android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/pass_doctor"
+                app:layout_constraintEnd_toStartOf="@+id/pass_doctor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/pass_doctor" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</layout>

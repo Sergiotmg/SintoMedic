@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.MainDoctorActivity">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.example.sintomedic.viewmodel.MainDoctorViewModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerListaPacientes"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_listaPacientes" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sin pacientes registrados"
+            android:visibility="@{vm.pacientesResource.isSuccess() &amp;&amp; vm.pacientes.isEmpty()}"
+            app:layout_constraintStart_toStartOf="@+id/recyclerListaPacientes"
+            app:layout_constraintTop_toTopOf="@+id/recyclerListaPacientes" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <TextView
+            android:id="@+id/txt_listaPacientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Lista de pacientes"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_add_paciente_a_listapacientes"
+            android:layout_width="135dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/colorPrimary"
+            android:onClick="addPacienteDniNie"
+            android:text="Añade paciente"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_apellidos_paciente_buscado" />
+
+        <EditText
+            android:id="@+id/editText_paciente_a_buscar_de_activity_doctor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@={vm.dniNiePaciente}"
+            app:layout_constraintEnd_toStartOf="@+id/search_de_activity_doctor"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_busca_new_paciente" />
+
+        <TextView
+            android:id="@+id/txt_nombre_paciente_buscado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:text="Nombre "
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_paciente_a_buscar_de_activity_doctor" />
+
+        <TextView
+            android:id="@+id/txt_apellidos_paciente_buscado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:text="Apellidos"
+            android:textColor="#090000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nombre_paciente_buscado" />
+
+        <ImageButton
+            android:id="@+id/search_de_activity_doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:onClick="searchPacienteByDniNie"
+            android:src="@drawable/ic_search_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/editText_paciente_a_buscar_de_activity_doctor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_busca_new_paciente" />
+
+        <TextView
+            android:id="@+id/nombre_paciente_buscado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@{vm.pacienteDniNie.data.nombre}"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_nombre_paciente_buscado"
+            app:layout_constraintEnd_toEndOf="@+id/editText_paciente_a_buscar_de_activity_doctor"
+            app:layout_constraintStart_toEndOf="@+id/txt_nombre_paciente_buscado" />
+
+        <TextView
+            android:id="@+id/apellidos_paciente_buscado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@{vm.pacienteDniNie.data.apellidos}"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_apellidos_paciente_buscado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_apellidos_paciente_buscado"
+            app:layout_constraintTop_toTopOf="@+id/txt_apellidos_paciente_buscado" />
+
+        <TextView
+            android:id="@+id/txt_busca_new_paciente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Busca nuevo paciente por DNI/NIE"
+            android:textColor="#F8000000"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

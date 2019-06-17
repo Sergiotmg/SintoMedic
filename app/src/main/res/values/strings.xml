@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">SintoMedic</string>
+    <string name="title_activity_login">Inicio de sesión</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">"SIGN IN "</string>
+    <string name="action_sign_in_short">SIGN</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="pass_lost">Forgot Password</string>
+    <string name="register_button">Register here</string>
+    <string name="name">Name</string>
+    <string name="Surnames">Surname</string>
+    <string name="insurance_company">Insurance company</string>
+    <string name="identity_card">DNI/NIE</string>
+    <string name="centro_trabajo">Job center</string>
+    <string name="place">Place</string>
+    <string name="mail">Mail</string>
+    <string name="license_number">License number</string>
+    <string name="phone">Phone</string>
+    <string name="title_activity_main" translatable="false">SintoMedic.</string>
+    <string name="title_activity_main_doctor" translatable="false">Doctor</string>
+    <string name="title_activity_main_paciente" translatable="false">Paciente</string>
+    <string name="sypmton">Add sympton</string>
+    <string-array name="spinner_doctores">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="add_patient">Add patient</string>
+    <string name="calendar_tomas_pacientes">Calendar of consultations and doses</string>
+    <string name="lista_doctores">See doctor\'s list</string>
+    <string name="tratamiento">Treatment</string>
+    <string name="error_field_required">Required field</string>
+    <string name="error_invalid_password">Wrong pass</string>
+    <string name="error_invalid_user_id">DNI NIE incorrect</string>
+    <string name="error_server">Server error</string>
+    <string name="name_register_patient">Name</string>
+    <string name="sintoma_added">Symptom added!</string>
+    <string name="prompt_user">DNI/NIE</string>
+    <string name="bot_reg_doc">Doctor\'s registration</string>
+    <string name="bot_reg_pac">Patient Registration</string>
+    <string name="show_symptons">Show symptons</string>
+</resources>

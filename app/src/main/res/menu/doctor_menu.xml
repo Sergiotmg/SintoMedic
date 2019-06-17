@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_modify_doctor_data"
+        android:orderInCategory="30"
+        android:title="Modificar datos personales"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/item_close_session"
+        android:orderInCategory="40"
+        android:title="Cerrar sesión"
+        app:showAsAction="never" />
+
+</menu>

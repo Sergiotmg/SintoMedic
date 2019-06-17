@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
+    <corners
+        android:radius="10dp"
+        />
+    <gradient
+        android:angle="135"
+        android:startColor="#E8E8E8"
+        android:endColor="#000000"
+        android:type="linear"
+        />
+    <size
+        android:width="100dp"
+        android:height="25dp"
+        />
+    <stroke
+        android:width="2dp"
+        android:color="#FFA938"
+        />
+    <background android:drawable="@drawable/ic_launcher_background"/>
+    <foreground android:drawable="@mipmap/ic_doctor_icon_foreground"/>
+
+
+</shape>

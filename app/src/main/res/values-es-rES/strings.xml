@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">SintoMedic</string>
+    <string name="title_activity_login">Inicio de sesión</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">ENTRAR</string>
+    <string name="action_sign_in_short">ENTRAR</string>
+    <string name="welcome">"Bienevnido !"</string>
+    <string name="invalid_username">Nombre de usuario no valido</string>
+    <string name="invalid_password">Contraseña inválida</string>
+    <string name="login_failed">"Login fallido"</string>
+    <string name="pass_lost">Recuperar contraseña</string>
+    <string name="register_button">Regístrate aquí</string>
+    <string name="prompt_user">DNI/NIE</string>
+    <string name="name">Nombre</string>
+    <string name="centro_trabajo">Centro de trabajo</string>
+    <string name="insurance_company">Compañía aseguradora</string>
+    <string name="identity_card">DNI/NIE</string>
+    <string name="Surnames">Apellidos</string>
+    <string name="place">Localidad</string>
+    <string name="mail">Correo</string>
+    <string name="phone">Teléfono</string>
+    <string name="license_number">Nº colegiado</string>
+    <string name="sypmton">Añadir síntoma</string>
+    <string name="add_patient">Añadir paciente</string>
+    <string name="lista_doctores" tools:ignore="ExtraTranslation">Ver lista doctores</string>
+    <string name="tratamiento" tools:ignore="ExtraTranslation">Tratamiento</string>
+    <string name="calendar_tomas_pacientes" tools:ignore="ExtraTranslation">Calendario de consultas y tomas</string>
+    <string name="name_register_patient">Nombre</string>
+    <string name="error_field_required">Este campo es requerido</string>
+    <string name="error_invalid_password">Contraseña incorrecta</string>
+    <string name="error_invalid_user_id">Longitud DNI, NIE o usuario superior a 9 caracteres, introduzca una menor.</string>
+    <string name="error_server">Error en servidor</string>
+    <string name="sintoma_added">Sintoma añadido!</string>
+    <string name="bot_reg_doc">Registro de doctor</string>
+    <string name="bot_reg_pac">Registro de paciente</string>
+    <string name="show_symptons">Mostrar síntomas</string>
+</resources>
