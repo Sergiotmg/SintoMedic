@@ -10,7 +10,7 @@
     </data>
 
     <android.support.constraint.ConstraintLayout
-        android:background="#FA5013"
+        android:background="@color/FondosBlue"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

@@ -2,7 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/back_sinto"
     tools:context=".view.MainDoctorActivity">
 
     <data>
@@ -13,6 +12,7 @@
     </data>
 
     <android.support.constraint.ConstraintLayout
+        android:background="@color/FondosBlue"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -172,7 +172,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:text="Busca nuevo paciente por DNI/NIE"
-            android:textColor="#F8000000"
+            android:textColor="#797676"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

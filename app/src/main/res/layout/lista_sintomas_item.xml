@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:tools="http://schemas.android.com/tools"
-    android:background="#ff8343"
+    android:background="@color/FondosItemBlue"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -22,6 +22,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:text="Fecha"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline11"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -34,6 +37,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:text="Hora"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline11"
             app:layout_constraintStart_toEndOf="@+id/fecha_sintoma_paciente"
             app:layout_constraintTop_toTopOf="parent" />
@@ -45,6 +51,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:text="@{sintoma.fechaHora}"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tag_fecha_sintoma_paciente"
             app:layout_constraintTop_toTopOf="@+id/guideline11" />
@@ -55,21 +62,26 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tag_hora_sintoma_paciente"
             app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
         <Button
             android:id="@+id/button_ver_descripcion_sintoma"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="VER DESCRIPCIÓN"
+            android:text="Ver descripción"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/hora_sintoma_paciente"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.909" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline11"

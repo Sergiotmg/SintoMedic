@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorApp">#FA5013</color>
+    <color name="RecyclersBlue">#4db8ff</color>
+    <color name="FondosBlue">#99d6ff</color>
+    <color name="FondosItemBlue">#b3daff</color>
+
 </resources>

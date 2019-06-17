@@ -69,9 +69,9 @@ public class PacienteAdapter extends RecyclerView.Adapter<PacienteAdapter.Pacien
     @Override
     public void onBindViewHolder(@NonNull PacienteViewHolder vh, int i) {
         vh.binding.setPaciente(pacientes.get(i));
-        GlideApp.with(vh.itemView.getContext())
+        /*GlideApp.with(vh.itemView.getContext())
                 .load(vh.binding.getPaciente().getLinkFotoPerfil())
-                .into(vh.binding.imageViewPaciente);
+                .into(vh.binding.imageViewPaciente);*/
         vh.binding.executePendingBindings();
     }
 

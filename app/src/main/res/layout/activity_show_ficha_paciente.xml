@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/back_sinto"
+    android:background="@color/FondosBlue"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout">
 
@@ -30,48 +30,46 @@
 
                 <TextView
                     android:id="@+id/nombre_ficha_paciente"
-                    android:layout_width="0dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="32dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
-                    android:foregroundGravity="center_vertical"
-                    android:gravity="center"
+                    android:fontFamily="casual"
+                    android:foregroundGravity="center_vertical|right"
+                    android:gravity="center|right"
                     android:text="@{vm.paciente.data.nombre}"
-                    android:textSize="20sp"
+                    android:textSize="24sp"
                     app:layout_constraintEnd_toStartOf="@+id/guideline9"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/nacimiento_fecha_paciente"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
                     android:foregroundGravity="center_vertical"
                     android:gravity="center"
                     android:text="@{vm.paciente.data.fechaNacimiento}"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="@+id/tag_nacimiento_fecha_paciente"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline21"
                     app:layout_constraintStart_toStartOf="@+id/guideline9"
-                    app:layout_constraintTop_toBottomOf="@+id/apellido_ficha_paciente" />
+                    app:layout_constraintTop_toTopOf="@+id/tag_nacimiento_fecha_paciente" />
 
                 <TextView
                     android:id="@+id/apellido_ficha_paciente"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="8dp"
-                    android:foregroundGravity="center_vertical"
-                    android:gravity="center"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="casual"
+                    android:foregroundGravity="left|center_vertical"
+                    android:gravity="center|left"
                     android:text="@{vm.paciente.data.apellidos}"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline21"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/guideline9"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -81,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="271dp"
                     android:orientation="vertical"
-                    app:layout_constraintGuide_percent="0.3"
+                    app:layout_constraintGuide_percent="0.38"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
@@ -89,36 +87,33 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
                     android:text="Compañía"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="@android:color/black"
+                    android:textColor="#000000"
                     android:textSize="18sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/guideline21"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintEnd_toEndOf="@+id/tag_nacimiento_fecha_paciente"
+                    app:layout_constraintStart_toStartOf="@+id/tag_nacimiento_fecha_paciente"
+                    app:layout_constraintTop_toBottomOf="@+id/tag_nacimiento_fecha_paciente" />
 
                 <TextView
                     android:id="@+id/txt_compania_paciente"
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="8dp"
                     android:gravity="center"
                     android:text="@{vm.paciente.data.companiaAseguradora}"
                     android:textSize="18sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/guideline21"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_tag_compania_paciente" />
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_tag_compania_paciente"
+                    app:layout_constraintStart_toStartOf="@+id/guideline9"
+                    app:layout_constraintTop_toTopOf="@+id/txt_tag_compania_paciente" />
 
                 <TextView
                     android:id="@+id/txt_tag_tratamiento"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="24dp"
                     android:text="Tratamiento"
                     android:textColor="#240000"
                     android:textSize="20sp"
@@ -144,6 +139,7 @@
                     android:id="@+id/txt_lista_sintomas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:text="Lista de síntomas"
                     android:textColor="@android:color/black"
@@ -156,9 +152,10 @@
                     android:id="@+id/recyclerListaSintomas"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/background_rec_views"
                     android:nestedScrollingEnabled="false"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -169,14 +166,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="24dp"
                     android:layout_marginEnd="8dp"
                     android:onClick="startEnfermedadesPacienteActivity"
                     android:text="Enfermedades"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/nacimiento_fecha_paciente" />
+                    app:layout_constraintTop_toBottomOf="@+id/txt_tag_compania_paciente" />
 
                 <android.support.constraint.Guideline
                     android:id="@+id/guideline21"
@@ -189,13 +189,13 @@
                     android:id="@+id/tag_nacimiento_fecha_paciente"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="24dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:gravity="center"
                     android:text="Fecha nacimiento"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="@android:color/black"
+                    android:textColor="#000000"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toStartOf="@+id/guideline9"
                     app:layout_constraintStart_toStartOf="parent"
