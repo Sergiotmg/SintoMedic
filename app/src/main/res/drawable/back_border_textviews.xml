@@ -5,7 +5,7 @@
     <solid android:color="#000000"/>
     <stroke
         android:color="#7F7F7F"
-        android:width="02dp"/>
+        android:width="4dp"/>
 
 
 </selector>

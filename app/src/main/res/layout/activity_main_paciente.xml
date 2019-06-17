@@ -73,13 +73,13 @@
 
         <TextView
             android:id="@+id/tratamiento_paciente"
-            android:background="@drawable/back_border_textviews"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
+            android:background="@drawable/back_border_textviews"
             android:scrollbars="vertical"
             android:text="@{vm.tratamiento.data.contenido}"
             app:layout_constraintBottom_toTopOf="@+id/guideline4"
