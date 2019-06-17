@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/back_sinto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout">
 
@@ -100,7 +101,7 @@
 
                 <TextView
                     android:id="@+id/txt_compania_paciente"
-                    android:layout_width="0dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
