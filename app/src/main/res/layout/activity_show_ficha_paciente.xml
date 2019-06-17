@@ -8,7 +8,7 @@
 
         <variable
             name="vm"
-            type="com.example.sintomedic.viewmodel.ShowFichaPacienteViewModel" />
+            type="com.example.sintomedicCasa.viewmodel.ShowFichaPacienteViewModel" />
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -34,6 +34,8 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
+                    android:foregroundGravity="center_vertical"
+                    android:gravity="center"
                     android:text="@{vm.paciente.data.nombre}"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toStartOf="@+id/guideline9"
@@ -47,8 +49,12 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:foregroundGravity="center_vertical"
+                    android:gravity="center"
                     android:text="@{vm.paciente.data.fechaNacimiento}"
                     android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tag_nacimiento_fecha_paciente"
                     app:layout_constraintEnd_toStartOf="@+id/guideline21"
                     app:layout_constraintStart_toStartOf="@+id/guideline9"
                     app:layout_constraintTop_toBottomOf="@+id/apellido_ficha_paciente" />
@@ -60,6 +66,8 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
+                    android:foregroundGravity="center_vertical"
+                    android:gravity="center"
                     android:text="@{vm.paciente.data.apellidos}"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toStartOf="@+id/guideline21"
@@ -80,9 +88,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
                     android:text="Compañía"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -94,8 +103,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
+                    android:gravity="center"
                     android:text="@{vm.paciente.data.companiaAseguradora}"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -122,9 +132,10 @@
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
-                    android:background="@drawable/back_border_textviews"
+                    android:background="@drawable/black_border_edit_text"
                     android:text="@={vm.tratamiento}"
                     app:layout_constraintEnd_toEndOf="parent"
+                    android:padding="5dp"
                     app:layout_constraintStart_toStartOf="@+id/txt_tag_tratamiento"
                     app:layout_constraintTop_toBottomOf="@+id/txt_tag_tratamiento" />
 
@@ -132,7 +143,6 @@
                     android:id="@+id/txt_lista_sintomas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:text="Lista de síntomas"
                     android:textColor="@android:color/black"
@@ -145,10 +155,9 @@
                     android:id="@+id/recyclerListaSintomas"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="32dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
-                    android:background="@drawable/back_border_textviews"
                     android:nestedScrollingEnabled="false"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -174,6 +183,22 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     app:layout_constraintGuide_percent="0.7" />
+
+                <TextView
+                    android:id="@+id/tag_nacimiento_fecha_paciente"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:text="Fecha nacimiento"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nombre_ficha_paciente" />
 
             </android.support.constraint.ConstraintLayout>
         </ScrollView>

@@ -4,7 +4,7 @@
     <data>
         <variable
             name="doctor"
-            type="com.example.sintomedic.model.Usuario" />
+            type="com.example.sintomedicCasa.model.Usuario" />
     </data>
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"

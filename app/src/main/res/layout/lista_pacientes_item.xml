@@ -6,7 +6,7 @@
     <data>
         <variable
             name="paciente"
-            type="com.example.sintomedic.model.Usuario" />
+            type="com.example.sintomedicCasa.model.Usuario" />
     </data>
 
     <android.support.constraint.ConstraintLayout

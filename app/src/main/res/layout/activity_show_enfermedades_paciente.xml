@@ -5,7 +5,7 @@
     <data>
         <variable
             name="vm"
-            type="com.example.sintomedic.viewmodel.ShowEnfermedadesPacienteViewModel" />
+            type="com.example.sintomedicCasa.viewmodel.ShowEnfermedadesPacienteViewModel" />
     </data>
 
     <android.support.constraint.ConstraintLayout

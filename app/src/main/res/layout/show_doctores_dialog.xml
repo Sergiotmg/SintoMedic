@@ -6,7 +6,7 @@
 
         <variable
             name="vm"
-            type="com.example.sintomedic.viewmodel.ShowDoctoresViewModel" />
+            type="com.example.sintomedicCasa.viewmodel.ShowDoctoresViewModel" />
     </data>
 
     <LinearLayout

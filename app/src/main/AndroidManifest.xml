@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.sintomedic">
+    package="com.example.sintomedicCasa">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -19,14 +19,14 @@
 
         <!-- LOGIN ACTIVITY -->
         <activity
-            android:name=".view.LoginActivity"
+            android:name="com.example.sintomedicCasa.view.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <!-- MAIN ACTIVITies -->
 
         <activity
-            android:name=".view.MainActivity"
+            android:name="com.example.sintomedicCasa.view.MainActivity"
             android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,70 +36,70 @@
         </activity>
 
         <activity
-            android:name=".view.MainPacienteActivity"
+            android:name="com.example.sintomedicCasa.view.MainPacienteActivity"
             android:label="@string/title_activity_main_paciente" />
 
         <activity
-            android:name=".view.MainDoctorActivity"
+            android:name="com.example.sintomedicCasa.view.MainDoctorActivity"
             android:label="@string/title_activity_main_doctor" />
 
         <!-- registro pacientes -->
         <activity
-            android:name=".view.RegisterPacienteActivity"
+            android:name="com.example.sintomedicCasa.view.RegisterPacienteActivity"
             android:label="Registro Paciente"
-            android:parentActivityName=".view.LoginActivity">
+            android:parentActivityName="com.example.sintomedicCasa.view.LoginActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.sintomedic.view.LoginActivity" />
+                android:value="com.example.sintomedicCasa.view.LoginActivity" />
         </activity>
 
         <!-- actividad registro doctores -->
         <activity
-            android:name=".view.RegisterDoctorActivity"
+            android:name="com.example.sintomedicCasa.view.RegisterDoctorActivity"
             android:label="Registro Doctor"
-            android:parentActivityName=".view.LoginActivity">
+            android:parentActivityName="com.example.sintomedicCasa.view.LoginActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.sintomedic.view.LoginActivity" />
+                android:value="com.example.sintomedicCasa.view.LoginActivity" />
         </activity>
 
         <activity
-            android:name=".view.ShowFichaPacienteActivity"
+            android:name="com.example.sintomedicCasa.view.ShowFichaPacienteActivity"
             android:label="Ficha paciente"
-            android:parentActivityName=".view.MainDoctorActivity"
+            android:parentActivityName="com.example.sintomedicCasa.view.MainDoctorActivity"
             android:windowSoftInputMode="adjustPan">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.sintomedic.view.MainPacienteActivity" />
+                android:value="com.example.sintomedicCasa.view.MainPacienteActivity" />
         </activity>
 
         <activity
-            android:name=".view.ShowSintomasPacienteActivity"
+            android:name="com.example.sintomedicCasa.view.ShowSintomasPacienteActivity"
             android:label="Síntomas">
         </activity>
 
         <activity
-            android:name=".view.ShowSintomaPacienteActivity"
+            android:name="com.example.sintomedicCasa.view.ShowSintomaPacienteActivity"
             android:label="Síntoma">
         </activity>
 
         <activity
-            android:name=".view.AddSintomaPacienteActivity"
+            android:name="com.example.sintomedicCasa.view.AddSintomaPacienteActivity"
             android:label="Registrar síntoma">
         </activity>
 
         <activity
-            android:name=".view.ShowEnfermedadesPacienteActivity"
+            android:name="com.example.sintomedicCasa.view.ShowEnfermedadesPacienteActivity"
             android:label="Enfermedades">
         </activity>
 
         <activity
-            android:name=".view.ShowEnfermedadPacienteActivity"
+            android:name="com.example.sintomedicCasa.view.ShowEnfermedadPacienteActivity"
             android:label="Enfermedad">
         </activity>
 
         <activity
-            android:name=".view.AddEnfermedadPacienteActivity"
+            android:name="com.example.sintomedicCasa.view.AddEnfermedadPacienteActivity"
             android:label="Registrar enfermedad">
         </activity>
 

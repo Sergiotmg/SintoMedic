@@ -5,7 +5,7 @@
     <data>
         <variable
             name="vm"
-            type="com.example.sintomedic.viewmodel.RegisterDoctorViewModel" />
+            type="com.example.sintomedicCasa.viewmodel.RegisterDoctorViewModel" />
     </data>
 
     <android.support.v4.widget.NestedScrollView
