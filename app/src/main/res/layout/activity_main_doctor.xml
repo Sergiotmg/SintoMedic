@@ -17,6 +17,7 @@
         android:layout_height="match_parent">
 
         <android.support.v7.widget.RecyclerView
+            android:background="@drawable/background_rec_views"
             android:id="@+id/recyclerListaPacientes"
             android:layout_width="0dp"
             android:layout_height="0dp"
