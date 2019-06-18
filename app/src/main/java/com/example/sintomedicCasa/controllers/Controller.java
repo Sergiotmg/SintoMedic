@@ -35,8 +35,8 @@ public class Controller {
 
     private static final String USUARIO_LOGUEADO = "USUARIO_LOGUEADO";
 
-    //private static final String BASE_URL = "http://10.0.2.2:8080/api/"; //IP + pto API Spring
-    private static final String BASE_URL = "http://192.168.1.94:8080/api/"; //IP + pto API Spring
+    //private static final String BASE_URL = "http://192.168.1.125:8081/api/"; //IP + pto API Spring  ac
+    private static final String BASE_URL = "http://192.168.1.94:8080/api/"; //IP + pto API Spring CASA
 
     private static final ObjectMapper objectMapper = new ObjectMapper()
             .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
