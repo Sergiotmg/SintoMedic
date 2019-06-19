@@ -41,14 +41,14 @@ public interface SintoMedicAPI {
 
     // ######################## DOCTORES ########################
 
-    /** Devuelve los doctores del usuario logueado.*/
+    /** Devuelve los doctores del usuario logueado.**/
     @GET("usuario/doctores")
     Call<List<Usuario>> getDoctores();
 
 
     // ######### ENFERMEDADES #############
 
-    /*** Devuelve las enfermedades de un paciente.   */
+    /*** Devuelve las enfermedades de un paciente.   **/
     @GET("usuarios/{userId}/enfermedades")
     Call<List<Enfermedad>> getEnfermedades(@Path("userId") Long userId);
 
@@ -56,11 +56,11 @@ public interface SintoMedicAPI {
     @POST("usuarios/{userId}/enfermedades")
     Call<Enfermedad> createEnfermedad(@Path("userId") Long userId, @Body Enfermedad enfermedad);
 
-    /** Devuelve la enfermedad de un paciente.  */
+    /** Devuelve la enfermedad de un paciente.  **/
     @GET("usuarios/{userId}/enfermedades/{id}")
     Call<Enfermedad> getEnfermedad(@Path("userId") Long userId, @Path("id") Long id);
 
-    /** Actualiza enfermedad la enfermedad de un paciente.  */
+    /** Actualiza enfermedad la enfermedad de un paciente.  **/
     @PUT("usuarios/{userId}/enfermedades/{id}")
     Call<Enfermedad> updateEnfermedad(
             @Path("userId") long userId,
@@ -79,11 +79,11 @@ public interface SintoMedicAPI {
     @GET("usuario/pacientes")
     Call<List<Usuario>> getPacientes();
 
-    /** Añade un paciente a la lista de pacientes del usuario logueado.   */
+    /** Añade un paciente a la lista de pacientes del usuario logueado.  **/
     @POST("usuario/pacientes/{id}")
     Call<Void> addPaciente(@Path("id") Long id);
 
-    /** Elimina un paciente de la lista de pacientes del usuario logueado.  */
+    /** Elimina un paciente de la lista de pacientes del usuario logueado.  **/
     @DELETE("usuario/pacientes/{id}")
     Call<Void> deletePaciente(@Path("id") Long id);
 
@@ -97,7 +97,7 @@ public interface SintoMedicAPI {
 
     //######### SINTOMAS #############
 
-    /** * Devuelve los síntomas de un paciente. *     */
+    /** * Devuelve los síntomas de un paciente. **/
     @GET("usuarios/{userId}/sintomas")
     Call<List<Sintoma>> getSintomas(@Path("userId") Long userId);
 

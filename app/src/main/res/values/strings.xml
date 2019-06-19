@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SintoMedic 2</string>
+    <string name="app_name">SintoMedic CASA</string>
     <string name="title_activity_login">Inicio de sesión</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -20,7 +20,7 @@
     <string name="mail">Mail</string>
     <string name="license_number">License number</string>
     <string name="phone">Phone</string>
-    <string name="title_activity_main" translatable="false">SintoMedic 2</string>
+    <string name="title_activity_main" translatable="false">SintoMedic CASA</string>
     <string name="title_activity_main_doctor" translatable="false">Doctor</string>
     <string name="title_activity_main_paciente" translatable="false">Paciente</string>
     <string name="sypmton">Add sympton</string>

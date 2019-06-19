@@ -34,9 +34,7 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
 public class Controller {
 
     private static final String USUARIO_LOGUEADO = "USUARIO_LOGUEADO";
-
-    private static final String BASE_URL = "http://192.168.1.126:8081/api/"; //IP + pto API Spring  ac 2
-    //private static final String BASE_URL = "http://192.168.1.94:8080/api/"; //IP + pto API Spring CASA
+    private static final String BASE_URL = "http://192.168.1.94:8080/api/"; //IP local + puerto API
 
     private static final ObjectMapper objectMapper = new ObjectMapper()
             .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
