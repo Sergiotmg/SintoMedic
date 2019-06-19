@@ -2,9 +2,12 @@ package com.example.sintomedicCasa.viewmodel;
 
 import android.arch.core.util.Function;
 import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.MediatorLiveData;
 import android.arch.lifecycle.MutableLiveData;
+import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.Transformations;
 import android.arch.lifecycle.ViewModel;
+import android.support.annotation.Nullable;
 
 import com.example.sintomedicCasa.controllers.Controller;
 import com.example.sintomedicCasa.controllers.Resource;
@@ -53,7 +56,18 @@ public class ShowFichaPacienteViewModel extends ViewModel {
             pacienteId, new Function<Long, LiveData<Resource<List<Sintoma>>>>() {
                 @Override
                 public LiveData<Resource<List<Sintoma>>> apply(Long input) {
-                    return Controller.getSintomas(input);
+                    final MediatorLiveData<Resource<List<Sintoma>>> mediator = new MediatorLiveData<>();
+                    mediator.addSource(Controller.getSintomas(input), new Observer<Resource<List<Sintoma>>>() {
+                        @Override
+                        public void onChanged(@Nullable Resource<List<Sintoma>> resource) {
+                            if (resource.isSuccess()) {
+                                Sintoma.sortSintomasByDate(resource.getData());
+                            }
+                            mediator.setValue(resource);
+                        }
+                    });
+
+                    return mediator;
                 }
             }
     );
@@ -66,7 +80,6 @@ public class ShowFichaPacienteViewModel extends ViewModel {
                 pacienteId.getValue(), tratamiento
         );
 
-        // TODO: validaciones
         _updateTratamiento.setValue(updateTratamiento);
     }
 

@@ -1,5 +1,6 @@
 package com.example.sintomedicCasa.view;
 
+import android.app.Activity;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.DialogInterface;
@@ -98,12 +99,12 @@ public class LoginActivity extends AppCompatActivity {
 
     public void startDoctorRegisterActivity(View view) {
         Intent intent = new Intent(this, RegisterDoctorActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent, RegisterDoctorActivity.REQUEST_CODE);
     }
 
     public void startPacienteRegisterActivity(View view) {
         Intent intent = new Intent(this, RegisterPacienteActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent, RegisterPacienteActivity.REQUEST_CODE);
     }
 
     private void startMainDoctorActivity() {
@@ -147,4 +148,17 @@ public class LoginActivity extends AppCompatActivity {
         builder.create().show();
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (resultCode == Activity.RESULT_OK) {
+            switch (requestCode) {
+                case RegisterPacienteActivity.REQUEST_CODE:
+                    Toast.makeText(this, "Registro completado", Toast.LENGTH_LONG).show();
+                    break;
+                case RegisterDoctorActivity.REQUEST_CODE:
+                    Toast.makeText(this, "Registro completado. Verificación pendiente", Toast.LENGTH_LONG).show();
+                    break;
+            }
+        }
+    }
 }

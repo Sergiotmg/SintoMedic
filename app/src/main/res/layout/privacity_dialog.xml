@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/privacity_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:id="@+id/scrollView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SintoMedic S.L. utilizará la información proporcionada en este formulario para comunicar datos entre doctores y pacientes. El tratamiento de los datos se basa en el REGLAMENTO (UE) 2016/679 DEL PARLAMENTO EUROPEO Y DEL CONSEJO de 27 de abril de 2016 El encargado de los datos en el domicilio social de la empresa será Sergio Monzó García. Usted tiene derecho al acceso, rectificación, supresión, limitación, oposición y portabilidad de los datos tratados. Puede ejercer estos derechos haciendo clic en los enlaces en el pie de página de cualquier correo electrónico que reciba de nosotros, o comunicándose con nosotros a info@sintomedic.com. Para obtener más información visite nuestra Política de Privacidad."
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxPrivacity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Acepto la Política de Privacidad"
+                    app:layout_constraintStart_toStartOf="@+id/textView2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="EXENCIÓN DE RESPONSABILIDAD: el presente contenido no representa una obra maestra sobre la privacidad de los datos en la UE ni tampoco pretende brindar asesoramiento legal para que tu empresa cumpla con las leyes de privacidad de datos, como el RGPD. Por el contrario, proporciona información que te ayudará a comprender mejor cómo abordar algunas cuestiones legales importantes. Recomendamos solicitar asesoramiento a un especialista en protección de datos y a las autoridades pertinentes."
+                    app:layout_constraintStart_toStartOf="@+id/textView2"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxPrivacity" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

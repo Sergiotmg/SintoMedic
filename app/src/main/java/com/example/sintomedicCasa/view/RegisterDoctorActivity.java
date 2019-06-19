@@ -1,5 +1,6 @@
 package com.example.sintomedicCasa.view;
 
+import android.app.Activity;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
@@ -16,7 +17,9 @@ import com.example.sintomedicCasa.databinding.ActivityRegistroDoctorBinding;
 import com.example.sintomedicCasa.model.Usuario;
 import com.example.sintomedicCasa.viewmodel.RegisterDoctorViewModel;
 
-public class RegisterDoctorActivity extends AppCompatActivity {
+public class RegisterDoctorActivity extends AppCompatActivity implements PrivacityFragmentDialog.PrivacityDialogListener {
+
+    public static final int REQUEST_CODE = 5;
 
     private RegisterDoctorViewModel vm;
     private ActivityRegistroDoctorBinding binding;
@@ -25,9 +28,6 @@ public class RegisterDoctorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_doctor);
-
-        // setTitle("Registro de doctor");
-        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_registro_doctor);
         binding.setLifecycleOwner(this);
@@ -55,12 +55,13 @@ public class RegisterDoctorActivity extends AppCompatActivity {
         binding.mailDoctor.setError(vm.getCorreoError());
         binding.passDoctor.setError(vm.getContraseniaError());
         binding.licenseNumber.setError(vm.getNumColegiadoError());
-        vm.createDoctor();
+        if (vm.isRegisterValid()) {
+            PrivacityFragmentDialog.newInstance().show(getSupportFragmentManager(), "PRIVACITY_DIALOG");
+        }
     }
 
     private void onCreateDoctorSuccess(Resource<Usuario> resource) {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+        setResult(Activity.RESULT_OK);
         finish();
     }
 
@@ -72,6 +73,11 @@ public class RegisterDoctorActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
+    }
+
+    @Override
+    public void onAcceptPrivacity() {
+        vm.createDoctor();
     }
 
 }

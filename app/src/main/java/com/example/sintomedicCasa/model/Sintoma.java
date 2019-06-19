@@ -1,16 +1,19 @@
 package com.example.sintomedicCasa.model;
 
 import java.io.Serializable;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
+import java.util.List;
 
 public class Sintoma implements Serializable {
 
     private Long id;
     private String descripcion;
     private Date fechaHora;
-    private float temperatura;
-    private float presionArterialAlta;
-    private float presionArterialBaja;
+    private Float temperatura;
+    private Float presionArterialAlta;
+    private Float presionArterialBaja;
     private String pulso;
 
     public Sintoma() {
@@ -41,27 +44,27 @@ public class Sintoma implements Serializable {
         this.fechaHora = fechaHora;
     }
 
-    public float getTemperatura() {
+    public Float getTemperatura() {
         return temperatura;
     }
 
-    public void setTemperatura(float temperatura) {
+    public void setTemperatura(Float temperatura) {
         this.temperatura = temperatura;
     }
 
-    public float getPresionArterialAlta() {
+    public Float getPresionArterialAlta() {
         return presionArterialAlta;
     }
 
-    public void setPresionArterialAlta(float presionArterialAlta) {
+    public void setPresionArterialAlta(Float presionArterialAlta) {
         this.presionArterialAlta = presionArterialAlta;
     }
 
-    public float getPresionArterialBaja() {
+    public Float getPresionArterialBaja() {
         return presionArterialBaja;
     }
 
-    public void setPresionArterialBaja(float presionArterialBaja) {
+    public void setPresionArterialBaja(Float presionArterialBaja) {
         this.presionArterialBaja = presionArterialBaja;
     }
 
@@ -71,6 +74,15 @@ public class Sintoma implements Serializable {
 
     public void setPulso(String pulso) {
         this.pulso = pulso;
+    }
+
+    public static void sortSintomasByDate(List<Sintoma> sintomas) {
+        Collections.sort(sintomas, new Comparator<Sintoma>() {
+            @Override
+            public int compare(Sintoma sintoma, Sintoma s2) {
+                return s2.getFechaHora().compareTo(sintoma.getFechaHora());
+            }
+        });
     }
 
 }

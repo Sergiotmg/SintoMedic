@@ -1,5 +1,6 @@
 package com.example.sintomedicCasa.view;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -21,7 +22,9 @@ import com.example.sintomedicCasa.viewmodel.RegisterPacienteViewModel;
 import java.util.Calendar;
 import java.util.Date;
 
-public class RegisterPacienteActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
+public class RegisterPacienteActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, PrivacityFragmentDialog.PrivacityDialogListener {
+
+    public static final int REQUEST_CODE = 4;
 
     private RegisterPacienteViewModel vm;
     private ActivityRegistroPacienteBinding binding;
@@ -30,9 +33,6 @@ public class RegisterPacienteActivity extends AppCompatActivity implements DateP
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_paciente);
-
-        // setTitle("Registro de paciente");
-        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_registro_paciente);
         binding.setLifecycleOwner(this);
@@ -69,12 +69,13 @@ public class RegisterPacienteActivity extends AppCompatActivity implements DateP
         binding.dniNiePaciente.setError(vm.getDniNieError());
         binding.mailPaciente.setError(vm.getCorreoError());
         binding.passPaciente.setError(vm.getContraseniaError());
-        vm.createPaciente();
+        if (vm.isRegisterValid()) {
+            PrivacityFragmentDialog.newInstance().show(getSupportFragmentManager(), "PRIVACITY_DIALOG");
+        }
     }
 
     private void onCreatePacienteSuccess(Resource<Usuario> resource) {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+        setResult(Activity.RESULT_OK);
         finish();
     }
 
@@ -95,6 +96,11 @@ public class RegisterPacienteActivity extends AppCompatActivity implements DateP
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
+    }
+
+    @Override
+    public void onAcceptPrivacity() {
+        vm.createPaciente();
     }
 
 }

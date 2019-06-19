@@ -51,7 +51,7 @@ public class RegisterDoctorViewModel extends ViewModel {
         }
     }
 
-    private boolean isRegisterValid() {
+    public boolean isRegisterValid() {
         return isCorreoValid() && isNombreValid() && isApellidosValid()
                 && isDniNieValid() && isNumColegiadoValid() && isContraseniaValid();
     }

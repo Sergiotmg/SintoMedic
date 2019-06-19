@@ -24,14 +24,8 @@
     <string name="title_activity_main_doctor" translatable="false">Doctor</string>
     <string name="title_activity_main_paciente" translatable="false">Paciente</string>
     <string name="sypmton">Add sympton</string>
-    <string-array name="spinner_doctores">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-    </string-array>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="add_patient">Add patient</string>
     <string name="calendar_tomas_pacientes">Calendar of consultations and doses</string>
     <string name="lista_doctores">See doctor\'s list</string>

@@ -52,7 +52,7 @@ public class RegisterPacienteViewModel extends ViewModel {
         }
     }
 
-    private boolean isRegisterValid() {
+    public boolean isRegisterValid() {
         return isCorreoValid() && isNombreValid() && isApellidosValid()
                 && isDniNieValid() && isContraseniaValid();
     }
