@@ -88,7 +88,7 @@
             android:id="@+id/editText_paciente_a_buscar_de_activity_doctor"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:ems="10"
@@ -130,7 +130,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="32dp"
             android:layout_marginBottom="8dp"
             android:background="@android:color/transparent"
             android:onClick="searchPacienteByDniNie"
@@ -143,13 +143,12 @@
             android:id="@+id/nombre_paciente_buscado"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:text="@{vm.pacienteDniNie.data.nombre}"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/txt_nombre_paciente_buscado"
             app:layout_constraintEnd_toEndOf="@+id/editText_paciente_a_buscar_de_activity_doctor"
-            app:layout_constraintStart_toEndOf="@+id/txt_nombre_paciente_buscado" />
+            app:layout_constraintStart_toStartOf="@+id/apellidos_paciente_buscado" />
 
         <TextView
             android:id="@+id/apellidos_paciente_buscado"
@@ -168,14 +167,11 @@
             android:id="@+id/txt_busca_new_paciente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
             android:text="Busca nuevo paciente por DNI/NIE"
             android:textColor="#797676"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/editText_paciente_a_buscar_de_activity_doctor"
             app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     </android.support.constraint.ConstraintLayout>
