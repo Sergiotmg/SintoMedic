@@ -15,7 +15,7 @@
         />
     <stroke
         android:width="2dp"
-        android:color="#FFA938"
+        android:color="#FF5722"
         />
     <background android:drawable="@drawable/ic_launcher_background"/>
     <foreground android:drawable="@mipmap/ic_doctor_icon_foreground"/>

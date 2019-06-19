@@ -80,7 +80,8 @@
             android:enabled="@{vm.username.length() > 0 &amp;&amp; vm.password.length() > 0}"
             android:onClick="login"
             android:text="@string/action_sign_in"
-            android:textColor="#F7000000"
+            android:textColor="#FCFCFC"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.508"
@@ -106,55 +107,45 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.25" />
 
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:text="@string/pass_lost"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password" />
-
         <Button
             android:id="@+id/regPacienteButton"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="32dp"
 
+            android:layout_marginEnd="8dp"
             android:background="@mipmap/ic_patient_icon_round"
             android:hapticFeedbackEnabled="false"
             android:onClick="startPacienteRegisterActivity"
             android:text="@string/bot_reg_pac"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#B5000000"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/loading"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+            app:layout_constraintTop_toBottomOf="@+id/password" />
 
         <Button
             android:id="@+id/regDoctorButton"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="8dp"
             android:background="@mipmap/ic_doctor_icon"
+            android:includeFontPadding="true"
             android:onClick="startDoctorRegisterActivity"
+            android:padding="2sp"
             android:text="@string/bot_reg_doc"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="#C1020000"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            android:textColor="#FF5722"
+            android:textSize="20sp"
+            android:textStyle="normal|bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+            app:layout_constraintTop_toBottomOf="@+id/password" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline3"
