@@ -92,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.7" />
+            app:layout_constraintGuide_percent="0.6" />
 
         <TextView
             android:id="@+id/temperatura_ver"
@@ -102,7 +102,7 @@
             android:layout_marginEnd="16dp"
             android:ems="10"
             android:inputType="none"
-            android:text="@{String.valueOf(vm.sintoma.data.temperatura ?? ``)}"
+            android:text="@{vm.sintoma.data.temperatura != null ? String.valueOf(vm.sintoma.data.temperatura) + ` ºC` : ``}"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/txt_temp_ver"
@@ -117,7 +117,7 @@
             android:layout_marginEnd="16dp"
             android:ems="10"
             android:inputType="none"
-            android:text="@{String.valueOf(vm.sintoma.data.presionArterialAlta ?? ``)}"
+            android:text="@{vm.sintoma.data.presionArterialAlta != null ? String.valueOf(vm.sintoma.data.presionArterialAlta) + ` mmHg` : ``}"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/txt_presion_alta_ver"
@@ -133,7 +133,7 @@
             android:ems="10"
             android:inputType="none"
             android:phoneNumber="false"
-            android:text="@{vm.sintoma.data.pulso}"
+            android:text="@{vm.sintoma.data.pulso.length > 0 ? vm.sintoma.data.pulso + ` pul/min.` : ``}"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/txt_pulso_ver"
@@ -159,7 +159,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="16dp"
             android:inputType="none"
-            android:text="@{String.valueOf(vm.sintoma.data.presionArterialBaja ?? ``)}"
+            android:text="@{vm.sintoma.data.presionArterialBaja != null ? String.valueOf(vm.sintoma.data.presionArterialBaja) + ` mmHg` : ``}"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/txt_presion_baja_ver"
